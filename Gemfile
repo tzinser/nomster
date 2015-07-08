@@ -46,3 +46,6 @@ end
 
 # Use bootstrap
 gem 'bootstrap-sass', '~> 3.3.4'
+
+# Pagination 
+gem 'will_paginate'
