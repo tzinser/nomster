@@ -50,3 +50,6 @@ gem 'bootstrap-sass', '~> 3.3.4'
 # Pagination 
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
+
+#integrate form controls
+gem 'simple_form'
