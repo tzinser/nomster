@@ -54,3 +54,6 @@ gem 'will_paginate-bootstrap'
 
 #integrate form controls
 gem 'simple_form'
+
+#integrate user authentication
+gem 'devise', '>= 3.2.4'
