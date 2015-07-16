@@ -45,7 +45,8 @@ end
 # gem 'debugger', group: [:development, :test]
 
 # Use bootstrap
-gem 'bootstrap-sass', '~> 3.3.4'
+gem 'bootstrap-sass', '~> 3.3.4.1'
+gem 'sprockets', '<= 2.11.0' #force
 
 # Pagination 
 gem 'will_paginate'
