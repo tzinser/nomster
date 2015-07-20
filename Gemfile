@@ -57,3 +57,7 @@ gem 'simple_form'
 
 #integrate user authentication
 gem 'devise', '>= 3.2.4'
+
+#Install geocoder
+gem "geocoder"
+gem "figaro", ">= 1.0.0"
