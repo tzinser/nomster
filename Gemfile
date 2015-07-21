@@ -61,3 +61,7 @@ gem 'devise', '>= 3.2.4'
 #Install geocoder
 gem "geocoder"
 gem "figaro", ">= 1.0.0"
+
+#Image upload for place photos
+gem 'carrierwave'
+gem "fog", "~> 1.3.1"
