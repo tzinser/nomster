@@ -7,13 +7,21 @@
 	    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 	    <script>
 		var map;
+
 		function initialize() {
-		  map = new google.maps.Map(document.getElementById('map-canvas'), {
-		    zoom: 12,
-		    center: {lat: <%= @place.latitude %>, lng: <%= @place.longitude %> }
+		  var myLatlng = new google.maps.LatLng(<%= @place.latitude %>,<%= @place.longitude %>);
+		  var mapOptions = {
+		    zoom: 10,
+		    center: myLatlng
+		  }
+		  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+		  var marker = new google.maps.Marker({
+		      position: myLatlng,
+		      map: map,
+		      title: "<%= @place.name %>"
 		  });
 		}
-
 		google.maps.event.addDomListener(window, 'load', initialize);
 
 	    </script>
@@ -104,12 +112,13 @@
 	<div class="clear"></div>
 
 		<% @place.photos.each do |photo| %>
-			<div>
+			<div class="col-sm-4 ">
 				<blockquote>
-					<%= image_tag photo.picture, :class => "photogallery" %><small><%= photo.caption %></small>
+					<%= photo.caption %><br />
+					<%= image_tag photo.picture, :class => "img-responsive center-block" %>
 				</blockquote>
 			</div>
 		<% end %>
-
+	</div>
 </div>
 
