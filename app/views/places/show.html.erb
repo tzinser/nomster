@@ -3,6 +3,10 @@
 	<i><%= @place.address %></i>
 	<br /><br />
 	<p><%= @place.description %></p>
+	<% if @place.user.present? %>
+		<small><%= @place.user.email %></small>
+	<% end %>
+	<br /><br />
     <% if @place.latitude.present? && @place.longitude.present? %>
 	    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 	    <script>
@@ -27,7 +31,6 @@
 	    </script>
 	    <div id="map-canvas"></div>
 	<% end %>
-	<br />
 	<div class="pull-right"> 
 		<% if current_user && current_user === @place.user %>
 			<%= link_to 'Edit', edit_place_path(@place), :class => 'btn btn-primary' %>
