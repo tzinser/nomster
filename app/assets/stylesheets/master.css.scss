@@ -26,6 +26,7 @@ body {
   background: url('/assets/wild_oliva.png');
   border-radius:  0;
   box-shadow: 0px 1px 3px #2a2a2a;
+  margin-bottom:  0px;
 }
 
 .navbar-inverse .navbar-brand {
@@ -94,4 +95,19 @@ blockquote p {
 .showlogin {
   color: white;
   padding-top: 15px;
+}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    height: 550px;
+    width: 100%;
+}
+
+.carousel-caption {
+      font-family: 'kaushan_scriptregular', serif;
+      font-size: 2em;
+      text-shadow: rgba(0,0,0,0.95) 2px 2px;
+      background-color: rgba(0,0,0,0.5);
+      width:100%;
+      position:absolute;
+      left:0;
 }
