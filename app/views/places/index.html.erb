@@ -37,9 +37,6 @@
   </a>
 </div>
 
-<% @places.each do |place| %>
-    <!-- A BUNCH MORE CODE -->
-<% end %>
 <div class="pagination-container">
 	<%= will_paginate @places, :class => "pagination-centered", :renderer => BootstrapPagination::Rails %>
 </div>
@@ -47,7 +44,7 @@
 <% @places.order("created_at desc").each do |place| %>
 	<div class="booyah-box col-xs-12 col-sm-10 col-sm-offset-1">
 		<div class="col-sm-8 pull-left">
-			<h1><%= link_to place.name, place_path(place) %></h1>
+			<h1><%= link_to place.name, place_path(place), :class => "title-shadow" %></h1>
 			<i><%= place.address %></i>
 			<br /><br />
 			<p><%= place.description %></p>
