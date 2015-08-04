@@ -11,8 +11,6 @@ class CommentTest < ActiveSupport::TestCase
   	 comment = FactoryGirl.create(:comment, :user => user, :place => place)
   	 expected = 'one star'
   	 actual = comment.humanized_rating
-  	 
-  	 puts actual
   	 assert_equal expected, actual
   end
 end

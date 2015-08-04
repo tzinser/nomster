@@ -5,7 +5,6 @@ FactoryGirl.define do
 		end
 		password "codemonkey"
 		password_confirmation "codemonkey"
-
 	end
 
 	factory :comment do
